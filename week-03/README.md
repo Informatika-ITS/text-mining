@@ -64,3 +64,20 @@ Corpus (D) di sini adalah kumpulan dokumen (d). Pada contoh di atas, corpus beri
 
 ## *Term Frequency-Inverse Document Frequency* (TF-IDF)
 
+TF-IDF adalah hasil perkalian dari nilai TF dan IDF, dengan rumus sebagai berikut
+
+![tfidfformula](tfidfformula.png)
+
+Menggunakan rumus di atas, nilai TF-IDF dari tiap kata yang telah didapat dari langkah sebelumnya adalah sebagai berikut
+
+![tfidfexample](tfidfexample.png)
+
+Meskipun kita sudah bisa menemukan solusi dari kekurangan BoW, TF-IDF sendiri juga sebenarnya memiliki kekurangan, yaitu tidak bisa menangkap makna bahasa/semantik. Sebagai contoh, 'funny' dan 'hilarious' bermakna serupa, tetapi menggunakan TF-IDF saja tidak bisa menentukan kesamaan makna tersebut. Diperlukan metode lain untuk bisa melakukan hal tersebut yang dikenal dengan nama Word2Vec
+
+## Word2Vec
+
+Word2Vec adalah sebuah metode *word embedding* yang mampu menyelesaikan masalah semantik di atas. Sebagai contoh, perhatikan gambar berikut
+
+![word2vec_kingqueen](word2vec_kingqueen.png)
+
+Gambar di atas adalah ilustrasi sederhana dari vektor 'queen', 'king', 'man', dan 'woman'. Dari gambar terlihat bahwa vektor yang dibentuk dari ujung vektor 'queen' dan 'king' memiliki panjang dan arah yang sama dengan vektor 'man' dan 'woman', menandakan bahwa Word2Vec bisa mengetahui bahwa keempat kata di atas memiliki makna yang sama mengenai gender.
