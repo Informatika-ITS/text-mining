@@ -39,3 +39,28 @@ Karena metode Bag-of-Words yang sangat sederhana, terdapat 3 kelemahan utama
 Oleh karena itu, diperlukan metode lain yang bisa memperbaiki kekurangan di atas, yaitu TF-IDF, singkatan dari *Term Frequency-Inverse Document Frequency*. Kita akan memelajari satu-persatu dulu mulai dari TF, IDF, lalu penggabungan keduanya menjadi TF-IDF
 
 ## *Term Frequency* (TF)
+
+Adalah perbandingan antara frekuensi suatu kata (`w`) dalam sebuah dokumen (`d`). Dokumen di sini adalah istilah umum, dapat diartikan sebagai kumpulan kata yang membentuk kalimat, paragraf, maupun teks secara utuh. Perbandingan antara jumlah kata `w` dan keseluruhan kata `d` adalah sebagai berikut
+
+![tfformula](tfformula.png)
+
+Agar lebih jelas, ikuti contoh berikut
+
+![tfexample1](tfexample1.png)
+
+Terdapat 2 dokumen berupa kalimat, A dan B, dengan total jumlah kata pada dokumen A adalah 5, dan B adalah 8. Menggunakan rumus di atas, kita membuat tabel untuk menghitung nilai TF dari setiap kata sebagai berikut
+
+![tfexample2](tfexample2.png)
+
+## *Inverse Document Frequency* (IDF)
+
+Adalah metode untuk menghitung seberapa penting suatu kata dalam sebuah dokumen. Hal ini dapat menyelesaikan kekurangan dari BoW, yaitu kata-kata yang sering muncul seperti 'is', 'of', dan 'and', bisa sangat sering muncul namun sebenarnya tidak begitu penting dalam proses pengolahan teks lebih lanjut. Nilai IDF dapat dihitung menggunakan rumus berikut
+
+![idfformula](idfformula.png)
+
+Corpus (D) di sini adalah kumpulan dokumen (d). Pada contoh di atas, corpus berisi 2 dokumen. IDF untuk setiap kata adalah sebagai berikut
+
+![idfexample1](idfexample1.png)
+
+## *Term Frequency-Inverse Document Frequency* (TF-IDF)
+
